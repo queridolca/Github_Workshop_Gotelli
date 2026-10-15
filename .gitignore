@@ -4,5 +4,5 @@
 .httr-oauth
 .DS_Store
 .quarto
-*.Rproj
+*$.Rproj
 use_mit_license(copyright=“queridolca”)
