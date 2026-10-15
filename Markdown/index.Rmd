@@ -1,6 +1,8 @@
 ---
 title: "test"
-output: html_document
+output:  
+  html_document: default
+  pdf_document: default
 date: "`r Sys.Date()`"
 ---
 
@@ -27,3 +29,18 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+```{r pressure_ggplot, echo=FALSE}
+library(ggplot2)
+ggplot(pressure, aes(x = temperature, y = pressure)) +
+  geom_point() +
+  geom_line() +
+  labs(
+    title = "Vapor Pressure of Mercury",
+    x = "Temperature (C)",
+    y = "Pressure (mm Hg)"
+  ) +
+  theme_minimal()
+```
+
